@@ -1,0 +1,225 @@
+# DocsTemplate AI 制約定義DSL
+
+```yaml
+@ai_constraints
+project: "DocsTemplate"
+version: "1.0.0"
+intent: "ドキュメントテンプレート管理におけるAI動作制約とガイドライン"
+scope: "テンプレート設計・生成・更新・AI理解性最適化"
+
+template_design_constraints:
+  ai_understanding_optimization:
+    rule: "MANDATORY"
+    description: "すべてのテンプレートはAI理解性を最優先に設計する"
+    requirements:
+      - yaml_metadata_inclusion: true
+      - context_information_explicit: true
+      - relationship_structure_clear: true
+      - design_intent_documentation: true
+    quality_gates:
+      - ai_readability: "95%以上"
+      - template_structure_compliance: "100%"
+      - metadata_completeness: "100%"
+
+  template_structure_enforcement:
+    rule: "STRICT"
+    description: "テンプレート構造の一貫性を維持する"
+    structure_requirements:
+      - metadata_section: "必須（@metadata YAMLブロック）"
+      - navigation_section: "必須（📑 ナビゲーション）"
+      - design_principles: "必須（設計思想・原則）"
+      - implementation_guide: "必須（実装ガイド）"
+      - change_history: "推奨（📝 変更履歴）"
+      - references: "推奨（📚 参考資料）"
+
+  hierarchical_detail_compliance:
+    rule: "ENFORCED"
+    description: "階層的詳細化原則に従う"
+    levels:
+      L1_overview: "概要・目的の明確な記述"
+      L2_structure: "構造・仕様の体系的整理"
+      L3_implementation: "実装詳細の具体的説明"
+
+template_generation_constraints:
+  content_generation_rules:
+    rule: "GUIDED"
+    description: "テンプレート生成時の品質基準"
+    requirements:
+      - placeholder_standardization: "{PLACEHOLDER_FORMAT}"
+      - example_inclusion: "具体例と抽象例の両方提供"
+      - customization_points: "拡張ポイントの明示"
+      - ai_prompt_optimization: "AIが理解しやすい構造化"
+  
+  metadata_generation:
+    rule: "MANDATORY"
+    description: "メタデータの自動生成と検証"
+    metadata_schema:
+      - type: "テンプレートタイプ分類"
+      - version: "バージョン管理"
+      - intent: "目的・意図の明確化"
+      - capabilities: "機能・能力の列挙"
+      - scope: "適用範囲の定義"
+      - context: "関連性・依存関係"
+
+ai_behavior_constraints:
+  template_understanding:
+    rule: "MANDATORY"
+    description: "テンプレート作業前に設計思想を理解する"
+    understanding_workflow:
+      step_1: "DocsTemplate READMEの設計思想確認"
+      step_2: "対象テンプレートカテゴリの理解"
+      step_3: "AI理解性最適化原則の確認"
+      step_4: "階層的詳細化レベルの把握"
+      step_5: "関連テンプレートとの整合性確認"
+
+  quality_first_approach:
+    rule: "PRIORITY"
+    description: "品質を最優先に作業を進める"
+    priority_order:
+      1: "AI理解性の最適化"
+      2: "テンプレート構造の一貫性"
+      3: "メタデータの完全性"
+      4: "拡張性の確保"
+      5: "ユーザビリティの向上"
+
+  consistency_maintenance:
+    rule: "STRICT"
+    description: "既存テンプレートとの一貫性を維持"
+    consistency_checks:
+      - structure_alignment: "構造の整合性確認"
+      - naming_convention: "命名規則の統一"
+      - style_consistency: "スタイル・フォーマットの統一"
+      - metadata_schema: "メタデータスキーマの一致"
+
+template_category_constraints:
+  project_templates:
+    focus: "プロジェクト概要・アーキテクチャ・技術スタック"
+    ai_optimization: "プロジェクト全体像のAI理解促進"
+    key_elements: ["vision", "architecture", "technology_stack", "roadmap"]
+
+  design_templates:
+    focus: "設計仕様・API・コンポーネント・データモデル"
+    ai_optimization: "設計意図と実装詳細のAI理解促進"
+    key_elements: ["design_intent", "specifications", "interfaces", "constraints"]
+
+  infrastructure_templates:
+    focus: "インフラ・CI/CD・セキュリティ・運用"
+    ai_optimization: "インフラ構成と運用手順のAI理解促進"
+    key_elements: ["infrastructure_design", "automation", "security", "operations"]
+
+  quality_templates:
+    focus: "テスト・品質基準・評価・検証"
+    ai_optimization: "品質基準と検証手順のAI理解促進"
+    key_elements: ["quality_criteria", "test_strategy", "validation", "metrics"]
+
+  governance_templates:
+    focus: "ルール・規約・ガイドライン・ポリシー"
+    ai_optimization: "ガバナンス要件のAI理解促進"
+    key_elements: ["rules", "standards", "policies", "compliance"]
+
+template_evolution_constraints:
+  continuous_improvement:
+    rule: "ONGOING"
+    description: "テンプレートの継続的改善"
+    improvement_areas:
+      - ai_feedback_integration: "AI使用結果のフィードバック統合"
+      - usage_pattern_analysis: "使用パターンの分析と最適化"
+      - template_effectiveness: "テンプレート効果測定と改善"
+
+  version_management:
+    rule: "SYSTEMATIC"
+    description: "テンプレートバージョン管理"
+    versioning_strategy:
+      - semantic_versioning: "意味的バージョニング採用"
+      - backward_compatibility: "後方互換性の維持"
+      - migration_guidance: "移行ガイドの提供"
+
+  community_contribution:
+    rule: "ENCOURAGED"
+    description: "コミュニティ貢献の促進"
+    contribution_guidelines:
+      - template_submission: "新規テンプレート提案プロセス"
+      - improvement_suggestion: "改善提案の仕組み"
+      - quality_review: "品質レビューサイクル"
+
+validation_and_enforcement:
+  automated_validation:
+    enabled: true
+    validation_rules:
+      - metadata_schema_check: "メタデータスキーマ検証"
+      - structure_compliance_check: "構造準拠確認"
+      - ai_readability_score: "AI理解性スコア計算"
+      - placeholder_consistency: "プレースホルダー一貫性"
+
+  manual_review_triggers:
+    - new_template_creation: "新規テンプレート作成時"
+    - major_template_update: "重要な更新時"
+    - ai_optimization_review: "AI最適化レビュー時"
+
+  quality_metrics:
+    - template_usage_rate: "テンプレート使用率"
+    - ai_understanding_score: "AI理解スコア"
+    - user_satisfaction: "ユーザー満足度"
+    - customization_success_rate: "カスタマイズ成功率"
+
+error_handling_constraints:
+  constraint_violation_response:
+    rule: "TRANSPARENT"
+    description: "制約違反時の対応"
+    violation_actions:
+      - clear_error_reporting: "明確なエラー報告"
+      - correction_guidance: "修正ガイダンス提供"
+      - alternative_suggestion: "代替案の提示"
+      - compliance_education: "コンプライアンス教育"
+
+  fallback_mechanisms:
+    - template_recovery: "テンプレート復旧手順"
+    - manual_intervention: "手動介入プロセス"
+    - escalation_procedure: "エスカレーション手順"
+```
+
+## AI への指示
+
+このDSLファイルは、DocsTemplate プロジェクトにおけるAI の動作を制約し、ガイドするものです。
+
+### テンプレート作業前の必須チェックリスト
+
+**すべてのテンプレート作業前に以下を確認してください：**
+
+1. **📖 DocsTemplate理念理解**
+   - [ ] AI理解性最適化の重要性を理解した
+   - [ ] 階層的詳細化原則を把握した
+   - [ ] テンプレート設計思想を理解した
+   - [ ] 相互参照・拡張性の考え方を把握した
+
+2. **🎯 品質基準確認**
+   - [ ] AI理解性95%以上の目標を確認した
+   - [ ] メタデータ完全性100%を確認した
+   - [ ] 構造準拠100%を確認した
+
+3. **📋 テンプレート構造確認**
+   - [ ] 必須セクション（メタデータ、ナビゲーション等）を把握した
+   - [ ] プレースホルダー形式を確認した
+   - [ ] 関連テンプレートとの整合性を確認した
+
+### 必須遵守事項
+
+1. **メタデータ記述**: 必ずYAML形式の@metadataセクションを含める
+2. **AI理解性最優先**: AIが文脈を理解しやすい構造で設計する
+3. **階層的詳細化**: L1概要→L2構造→L3実装の段階的詳細化を行う
+4. **一貫性維持**: 既存テンプレートとの構造・スタイル統一を保つ
+5. **拡張性確保**: カスタマイズポイントを明示し、柔軟な拡張を可能にする
+
+### 品質基準
+
+- **AI理解性**: 95%以上
+- **テンプレート構造準拠**: 100%
+- **メタデータ完全性**: 100%
+- **プレースホルダー一貫性**: 100%
+
+### エラー時対応
+
+- 制約違反は明確に報告する
+- 修正ガイダンスを提供する
+- 代替案を提示する
+- 既存テンプレートとの整合性を確保する

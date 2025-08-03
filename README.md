@@ -14,6 +14,7 @@ scope:
   - "設計仕様"
   - "実装ガイド"
   - "品質管理"
+  - "インフラ・CI/CD"
 context:
   project: "DocsTemplate"
   parent: null
@@ -22,6 +23,7 @@ context:
     - "./design/*"
     - "./test/*"
     - "./rules/*"
+    - "./infrastructure/*"
 ```
 
 ## 📑 ナビゲーション
@@ -32,10 +34,12 @@ context:
    - [設計・実装系](#-設計実装系)
    - [テスト・品質系](#-テスト品質系)
    - [ルール・規約系](#-ルール規約系)
+   - [インフラ・CI/CD系](#️-インフラcicd系)
 3. [AIとの対話による成長](#-aiとの対話による成長)
 4. [評価指標](#-評価指標)
-5. [今後の展開](#-今後の展開)
-6. [ライセンス](#-ライセンス)
+5. [AI制約とガイドライン](#-ai制約とガイドライン)
+6. [今後の展開](#-今後の展開)
+7. [ライセンス](#-ライセンス)
 
 ## 🎯 テンプレートの設計思想
 
@@ -90,6 +94,13 @@ core_concepts:
 - [Git運用ルール](./rules/git-workflow.md)
 - [ドキュメント規約](./rules/documentation-rules.md)
 
+### ☁️ インフラ・CI/CD系
+- [クラウドインフラ設計書](./infrastructure/cloud-infrastructure-template.md)
+- [CI/CDパイプライン設計書](./infrastructure/cicd-pipeline-template.md)
+- [デプロイメント戦略書](./infrastructure/deployment-strategy-template.md)
+- [監視・運用設計書](./infrastructure/monitoring-operations-template.md)
+- [セキュリティ設定書](./infrastructure/security-configuration-template.md)
+
 ## 🌿 AIとの対話による成長
 
 1. **理解の深化**
@@ -110,6 +121,42 @@ core_concepts:
 | 保守性 | 更新の容易さ、一貫性の維持 | レビュー時間、修正回数 |
 | 活用度 | テンプレートの使用頻度 | 使用統計、参照回数 |
 | 拡張性 | カスタマイズの柔軟さ | カスタマイズ事例数 |
+
+## 🤖 AI制約とガイドライン
+
+DocsTemplateでは、AIがテンプレートを適切に理解・生成・更新できるよう、専用の制約定義を設けています。
+
+### AI制約ファイル
+- **制約定義**: [ai-constraints.yaml](./ai-constraints.yaml)
+- **目的**: テンプレート品質の一貫性確保とAI理解性の最適化
+- **適用範囲**: すべてのテンプレート作業（作成・更新・カスタマイズ）
+
+### 重要な制約事項
+
+```yaml
+@ai_mandatory_rules
+template_quality_standards:
+  - ai_readability: "95%以上"
+  - metadata_completeness: "100%"
+  - structure_compliance: "100%"
+  - placeholder_consistency: "100%"
+
+design_principles:
+  - ai_understanding_optimization: "AI理解性を最優先"
+  - hierarchical_detail: "L1概要→L2構造→L3実装"
+  - consistency_maintenance: "既存テンプレートとの統一性"
+  - extensibility_assurance: "拡張性の確保"
+```
+
+### AIによるテンプレート作業時の必須手順
+
+1. **📖 理念理解**: DocsTemplate設計思想の確認
+2. **🎯 品質基準**: AI理解性・構造準拠・完全性の確認
+3. **📋 構造確認**: 必須セクション・プレースホルダー形式の把握
+4. **🔄 整合性**: 関連テンプレートとの一貫性確認
+5. **✅ 品質検証**: 制約遵守状況の最終確認
+
+**⚠️ 重要**: すべてのテンプレート関連作業前に [`ai-constraints.yaml`](./ai-constraints.yaml) を参照し、制約事項を理解してから作業を開始してください。
 
 ## 🔜 今後の展開
 
