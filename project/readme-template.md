@@ -84,6 +84,17 @@ steps:
       - "command4"
 ```
 
+### 関連ドキュメント
+
+- **[フロントエンドドキュメント](./docs/frontend/README.md)** - UI・フロントエンド関連ドキュメント
+- **[バックエンドドキュメント](./docs/backend/README.md)** - API・バックエンド関連ドキュメント
+- **[インフラストラクチャ設計書](./docs/infrastructure/README.md)** - インフラ全体ナビゲーション
+- **[AI制約定義](./shared/config/ai-constraints.yaml)** - AI動作制約とガイドライン
+
+> **📝 ドキュメント作成について**  
+> 新しいドキュメントの作成時は、**[DocsTemplate](../DocsTemplate/)を利用**してください。  
+> AI駆動開発に最適化されたテンプレート群により、一貫性のある高品質なドキュメントを効率的に作成できます。
+
 ## 📊 開発状況
 
 ```yaml
