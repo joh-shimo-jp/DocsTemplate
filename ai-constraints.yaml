@@ -3,9 +3,10 @@
 ```yaml
 @ai_constraints
 project: "DocsTemplate"
-version: "1.0.0"
+version: "1.1.0"
 intent: "ドキュメントテンプレート管理におけるAI動作制約とガイドライン"
 scope: "テンプレート設計・生成・更新・AI理解性最適化"
+updated: "2025年8月7日 - 構造統合対応"
 
 template_design_constraints:
   ai_understanding_optimization:
@@ -93,29 +94,39 @@ ai_behavior_constraints:
 
 template_category_constraints:
   project_templates:
-    focus: "プロジェクト概要・アーキテクチャ・技術スタック"
+    focus: "プロジェクト概要・アーキテクチャ・技術スタック・README"
     ai_optimization: "プロジェクト全体像のAI理解促進"
-    key_elements: ["vision", "architecture", "technology_stack", "roadmap"]
+    key_elements: ["vision", "architecture", "technology_stack", "roadmap", "readme_structure"]
+    sub_categories:
+      feature_templates:
+        focus: "機能開発統合テンプレート（UI・設計・テスト）"
+        location: "templates/project/feature/"
+        ai_optimization: "機能開発ワークフローのAI理解促進"
+        key_elements: ["ui_design", "feature_specifications", "test_planning", "integration"]
+      infrastructure_templates:
+        focus: "インフラ・CI/CD・セキュリティ・運用"
+        location: "templates/project/infrastructure/"
+        ai_optimization: "インフラ構成と運用手順のAI理解促進"
+        key_elements: ["infrastructure_design", "automation", "security", "operations"]
 
-  design_templates:
-    focus: "設計仕様・API・コンポーネント・データモデル"
-    ai_optimization: "設計意図と実装詳細のAI理解促進"
-    key_elements: ["design_intent", "specifications", "interfaces", "constraints"]
-
-  infrastructure_templates:
-    focus: "インフラ・CI/CD・セキュリティ・運用"
-    ai_optimization: "インフラ構成と運用手順のAI理解促進"
-    key_elements: ["infrastructure_design", "automation", "security", "operations"]
+  system_design_templates:
+    focus: "システム全体設計・API設計"
+    location: "templates/design/" (DEPRECATED - 統合済み)
+    ai_optimization: "システム設計意図のAI理解促進"
+    key_elements: ["api_design", "system_architecture"]
+    note: "API設計テンプレートはproject/feature/design/に統合済み"
 
   quality_templates:
-    focus: "テスト・品質基準・評価・検証"
+    focus: "プロジェクト全体の品質基準・評価・検証"
+    location: "templates/test/"
     ai_optimization: "品質基準と検証手順のAI理解促進"
-    key_elements: ["quality_criteria", "test_strategy", "validation", "metrics"]
+    key_elements: ["quality_criteria", "standards", "validation", "metrics"]
 
   governance_templates:
     focus: "ルール・規約・ガイドライン・ポリシー"
+    location: "templates/rules/"
     ai_optimization: "ガバナンス要件のAI理解促進"
-    key_elements: ["rules", "standards", "policies", "compliance"]
+    key_elements: ["coding_standards", "documentation_rules", "git_workflow", "policies"]
 
 template_evolution_constraints:
   continuous_improvement:
@@ -217,9 +228,30 @@ error_handling_constraints:
 - **メタデータ完全性**: 100%
 - **プレースホルダー一貫性**: 100%
 
+### 📁 現在のテンプレート構造 (2025年8月更新)
+
+```
+templates/
+├── project/                    # プロジェクト文書系
+│   ├── feature/               # 機能開発統合テンプレート
+│   │   ├── ui/               # UI設計テンプレート
+│   │   ├── design/           # 機能設計テンプレート（API・コンポーネント・データモデル・仕様）
+│   │   └── test/             # 機能テストテンプレート
+│   └── infrastructure/        # インフラ設計書テンプレート
+├── test/                      # プロジェクト全体品質管理
+└── rules/                     # 開発規約・ルールテンプレート
+```
+
+**重要な構造変更**:
+- ❌ 削除: `templates/design/` 独立ディレクトリ
+- ❌ 削除: `templates/feature/` 独立ディレクトリ  
+- ✅ 統合: 全ての設計テンプレートを `project/feature/design/` に集約
+- ✅ 統合: インフラテンプレートを `project/infrastructure/` に移動
+
 ### エラー時対応
 
 - 制約違反は明確に報告する
 - 修正ガイダンスを提供する
 - 代替案を提示する
 - 既存テンプレートとの整合性を確保する
+- **新構造への対応**: 古いパス参照を新しい構造に修正する

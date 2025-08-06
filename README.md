@@ -4,7 +4,17 @@
 @metadata
 type: "template-system"
 version: "1.0.0"
-intent: "AI駆動開発のためのドキュメントテンプレート管理"
+i#### 機能・インフラドキュメント
+- [機能開発統合テンプレート](./templates/project/feature/) - UI・設計・テスト
+- [インフラ設計書](./templates/project/infrastructure/) - クラウド・CI/CD・運用
+
+### 🧪 品質管理系
+- [品質基準定義](./templates/test/quality-standard-template.md)
+
+### 📋 ルール・規約系
+- [コーディング規約](./templates/rules/coding-standard.md)
+- [Git運用ルール](./templates/rules/git-workflow.md)
+- [ドキュメント規約](./templates/rules/documentation-rules.md)ュメントテンプレート管理"
 capabilities:
   - "ドキュメント自動生成"
   - "AI理解性の最適化"
@@ -76,30 +86,33 @@ core_concepts:
 ## 📑 テンプレート一覧
 
 ### 📘 プロジェクト概要系
-- [README基本テンプレート](./project/readme-template.md)
-- [アーキテクチャ概要](./project/architecture-template.md)
-- [技術スタック定義](./project/tech-stack-template.md)
+- [READMEテンプレート](./templates/project/readme-template.md)
+- [アーキテクチャ概要](./templates/project/architecture-template.md)
+- [技術スタック定義](./templates/project/tech-stack-template.md)
+- [フロントエンド特化README](./templates/project/frontend-readme-template.md)
+- [バックエンド特化README](./templates/project/backend-readme-template.md)
+- [AI/ML特化README](./templates/project/ai-ml-readme-template.md)
 
-### 🔧 設計・実装系
-- [コンポーネント設計書](./design/component-template.md)
-- [API設計書](./design/api-template.md)
-- [データモデル定義](./design/data-model-template.md)
+#### 機能・インフラドキュメント
+- [機能企画・要求仕様書](./templates/project/feature/)
+- [インフラ設計書](./templates/project/infrastructure/)
 
-### 🧪 テスト・品質系
-- [テスト計画書](./test/test-plan-template.md)
-- [品質基準定義](./test/quality-standard-template.md)
+### 🔧 システム設計系
+- [API設計書](./templates/design/api-template.md)
+
+### � 機能開発系
+- [機能開発テンプレート総合](./templates/feature/)
+- [UI設計テンプレート](./templates/feature/ui/)
+- [機能設計テンプレート](./templates/feature/design/)
+- [機能テストテンプレート](./templates/feature/test/)
+
+### 🧪 品質管理系
+- [品質基準定義](./templates/test/quality-standard-template.md)
 
 ### 📋 ルール・規約系
-- [コーディング規約](./rules/coding-standard.md)
-- [Git運用ルール](./rules/git-workflow.md)
-- [ドキュメント規約](./rules/documentation-rules.md)
-
-### ☁️ インフラ・CI/CD系
-- [クラウドインフラ設計書](./infrastructure/cloud-infrastructure-template.md)
-- [CI/CDパイプライン設計書](./infrastructure/cicd-pipeline-template.md)
-- [デプロイメント戦略書](./infrastructure/deployment-strategy-template.md)
-- [監視・運用設計書](./infrastructure/monitoring-operations-template.md)
-- [セキュリティ設定書](./infrastructure/security-configuration-template.md)
+- [コーディング規約](./templates/rules/coding-standard.md)
+- [Git運用ルール](./templates/rules/git-workflow.md)
+- [ドキュメント規約](./templates/rules/documentation-rules.md)
 
 ## 🌿 AIとの対話による成長
 

@@ -1,18 +1,29 @@
-# {PROJECT_NAME}（バックエンド）ドキュメント
+# {PROJECT_NAME} バックエンドドキュメントテンプレート
 
 ```yaml
 @metadata
-type: "backend_readme"
-intent: "バックエンド関連ドキュメントのナビゲーション"
+type: "backend_readme_template"
+version: "1.0.0"
+intent: "{PROJECT_NAME}のバックエンド開発・運用ドキュメントナビゲーションテンプレート"
 context:
-  project: "${project_name}"
-  layer: "backend"
-  parent: "../../README.md"
+  project: "{project_name}"
+  layer: "backend_development"
+  parent: "./README.md"
   children:
     - "./setup-guide.md"
     - "./development-guide.md"
     - "./api-reference.md"
 capabilities:
+  - "バックエンド開発ガイド"
+  - "API仕様管理"
+  - "セットアップ手順"
+  - "デプロイメント管理"
+  - "パフォーマンス最適化"
+scope:
+  - "サーバーサイド開発"
+  - "API設計・実装"
+  - "データベース操作"
+  - "認証・認可"
   - "API提供"
   - "データ処理"
   - "ビジネスロジック"
